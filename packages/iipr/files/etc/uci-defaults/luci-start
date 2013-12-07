@@ -1,0 +1,44 @@
+#!/bin/sh
+
+services="olsrd quagga tinyproxy hsflowd haproxy sflowovsd relayd wifidog" 
+
+for service in ${services} ; do 
+
+/etc/init.d/${service} enabled && {
+	/etc/init.d/${service} stop
+	/etc/init.d/${service} disable
+}
+
+done
+
+openvpn --mktun --dev tap0
+ifconfig tap0 0.0.0.0 promisc up
+
+cat << EOF >> /etc/config/network
+config interface 'vpn'
+        option proto 'static'
+        option ifname 'tap0'
+        option dns '8.8.8.8 156.154.70.1'
+EOF
+
+cat << EOF >> /etc/config/firewall
+#Allow SSH
+config rule
+        option src              wan
+        option proto            tcp
+        option dest_port        22
+        option target           ACCEPT
+EOF
+
+uci add firewall rule
+uci set firewall.@rule[-1].src=wan
+uci set firewall.@rule[-1].target=ACCEPT
+uci set firewall.@rule[-1].proto=tcp
+uci set firewall.@rule[-1].dest_port=22
+uci commit firewall
+/etc/init.d/firewall restart
+
+
+touch /tmp/.luci-start.run
+
+exit 0

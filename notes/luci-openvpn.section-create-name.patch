@@ -1,0 +1,15 @@
+--- applications/luci-openvpn/luasrc/model/cbi/openvpn.lua (revision 9679)
++++ applications/luci-openvpn/luasrc/model/cbi/openvpn.lua (working copy)
+@@ -53,6 +53,11 @@
+         self.sectiontype .. ".select"
+     )
+ 
++    name = luci.http.formvalue(
++        luci.cbi.CREATE_PREFIX .. self.config .. "." ..
++        self.sectiontype
++    )
++
+     if name and not name:match("[^a-zA-Z0-9_]") then
+         uci:section(
+             "openvpn", "openvpn", name,
+
