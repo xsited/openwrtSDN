@@ -1,6 +1,6 @@
 #!/bin/sh
 
-services="olsrd quagga tinyproxy hsflowd haproxy sflowovsd relayd wifidog" 
+services="olsrd quagga tinyproxy hsflowd haproxy sflowovsd relayd wifidog keepalived" 
 
 for service in ${services} ; do 
 
@@ -15,6 +15,7 @@ openvpn --mktun --dev tap0
 ifconfig tap0 0.0.0.0 promisc up
 
 cat << EOF >> /etc/config/network
+
 config interface 'vpn'
         option proto 'static'
         option ifname 'tap0'
