@@ -10,3 +10,9 @@ http://www.gargoyle-router.com/gargoyle
 
 It is to be applied to  attitude adjustment branch and build also including ebtables when using configuration options client_bridge=1.
 
+https://forum.openwrt.org/viewtopic.php?id=30185&p=2
+https://forum.openwrt.org/viewtopic.php?id=42614
+http://www.gargoyle-router.com/gargoyle/projects/gargoyle/repository/revisions/master/entry/patches-generic/04-arpnat.patch
+http://www.dd-wrt.com/phpBB2/viewtopic.php?t=161963
+
+
