@@ -32,6 +32,7 @@
   ./scripts/feeds install keepalived
   ./scripts/feeds install python-webpy
   ./scripts/feeds install libdnet
+  ./scripts/feeds install netserver
   ./scripts/feeds install -a -p openvswitch
   ./scripts/feeds update luci
   echo '# CONFIG_KERNEL_BRIDGE is not set' >> .config

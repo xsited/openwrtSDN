@@ -592,7 +592,7 @@ define KernelPackage/ipvs-core
     CONFIG_NETFILTER_XT_MATCH_IPVS=n
   DEPENDS:=+kmod-ipt-core +kmod-lib-crc32c +ip6tables
   FILES:=$(LINUX_DIR)/net/netfilter/ipvs/ip_vs.ko
-  AUTOLOAD:=$(call AutoLoad,40,ipvs-core)
+  AUTOLOAD:=$(call AutoLoad,60,ip_vs)
 endef
 
 define KernelPackage/ipvs-core/description
@@ -608,7 +608,7 @@ define KernelPackage/ipvs-rr
      CONFIG_IP_VS_RR
   DEPENDS:=+kmod-ipvs-core
   FILES:=$(LINUX_DIR)/net/netfilter/ipvs/ip_vs_rr.ko
-  AUTOLOAD:=$(call AutoLoad,45,ip_vs_rr)
+  AUTOLOAD:=$(call AutoLoad,65,ip_vs_rr)
 endef
 
 define KernelPackage/ipvs-rr/description
@@ -624,7 +624,7 @@ define KernelPackage/ipvs-wrr
       CONFIG_IP_VS_WRR
   DEPENDS:=+kmod-ipvs-core
   FILES:=$(LINUX_DIR)/net/netfilter/ipvs/ip_vs_wrr.ko
-  AUTOLOAD:=$(call AutoLoad,45,ip_vs_wrr)
+  AUTOLOAD:=$(call AutoLoad,65,ip_vs_wrr)
 endef
 
 define KernelPackage/ipvs-wrr/description
@@ -640,7 +640,7 @@ define KernelPackage/ipvs-lc
     CONFIG_IP_VS_LC
   DEPENDS:=+kmod-ipvs-core
   FILES:=$(LINUX_DIR)/net/netfilter/ipvs/ip_vs_lc.ko
-  AUTOLOAD:=$(call AutoLoad,45,ip_vs_lc)
+  AUTOLOAD:=$(call AutoLoad,65,ip_vs_lc)
 endef
 
 define KernelPackage/ipvs-lc/description
@@ -658,7 +658,7 @@ define KernelPackage/ipvs-wlc
     CONFIG_IP_VS_WLC
   DEPENDS:=+kmod-ipvs-core
   FILES:=$(LINUX_DIR)/net/netfilter/ipvs/ip_vs_wlc.ko
-  AUTOLOAD:=$(call AutoLoad,45,ip_vs_wlc)
+  AUTOLOAD:=$(call AutoLoad,65,ip_vs_wlc)
 endef
 
 define KernelPackage/ipvs-wlc/description
@@ -676,7 +676,7 @@ define KernelPackage/ipvs-lblc
     CONFIG_IP_VS_LBLC
   DEPENDS:=+kmod-ipvs-core
   FILES:=$(LINUX_DIR)/net/netfilter/ipvs/ip_vs_lblc.ko
-  AUTOLOAD:=$(call AutoLoad,45,ip_vs_lblc)
+  AUTOLOAD:=$(call AutoLoad,65,ip_vs_lblc)
 endef
 
 define KernelPackage/ipvs-lblc/description
@@ -698,7 +698,7 @@ define KernelPackage/ipvs-lblcr
     CONFIG_IP_VS_LBLCR
   DEPENDS:=+kmod-ipvs-core
   FILES:=$(LINUX_DIR)/net/netfilter/ipvs/ip_vs_lblcr.ko
-  AUTOLOAD:=$(call AutoLoad,45,ip_vs_lblcr)
+  AUTOLOAD:=$(call AutoLoad,65,ip_vs_lblcr)
 endef
 
 define KernelPackage/ipvs-lblcr/description
@@ -724,7 +724,7 @@ define KernelPackage/ipvs-dh
     CONFIG_IP_VS_DH
   DEPENDS:=+kmod-ipvs-core
   FILES:=$(LINUX_DIR)/net/netfilter/ipvs/ip_vs_dh.ko
-  AUTOLOAD:=$(call AutoLoad,45,ip_vs_dh)
+  AUTOLOAD:=$(call AutoLoad,65,ip_vs_dh)
 endef
 
 define KernelPackage/ipvs-dh/description
@@ -742,7 +742,7 @@ define KernelPackage/ipvs-sh
     CONFIG_IP_VS_SH
   DEPENDS:=+kmod-ipvs-core
   FILES:=$(LINUX_DIR)/net/netfilter/ipvs/ip_vs_sh.ko
-  AUTOLOAD:=$(call AutoLoad,45,ip_vs_sh)
+  AUTOLOAD:=$(call AutoLoad,65,ip_vs_sh)
 endef
 
 define KernelPackage/ipvs-sh/description
@@ -760,7 +760,7 @@ define KernelPackage/ipvs-sed
     CONFIG_IP_VS_SED
   DEPENDS:=+kmod-ipvs-core
   FILES:=$(LINUX_DIR)/net/netfilter/ipvs/ip_vs_sed.ko
-  AUTOLOAD:=$(call AutoLoad,45,ip_vs_sed)
+  AUTOLOAD:=$(call AutoLoad,65,ip_vs_sed)
 endef
 
 define KernelPackage/ipvs-sed/description
@@ -781,7 +781,7 @@ define KernelPackage/ipvs-nq
     CONFIG_IP_VS_NQ
   DEPENDS:=+kmod-ipvs-core
   FILES:=$(LINUX_DIR)/net/netfilter/ipvs/ip_vs_nq.ko
-  AUTOLOAD:=$(call AutoLoad,45,ip_vs_nq)
+  AUTOLOAD:=$(call AutoLoad,65,ip_vs_nq)
 endef
 
 define KernelPackage/ipvs-nq/description
@@ -802,7 +802,7 @@ define KernelPackage/ipvs-ftp
     CONFIG_IP_VS_FTP
   DEPENDS:=+kmod-ipvs-core
   FILES:=$(LINUX_DIR)/net/netfilter/ipvs/ip_vs_ftp.ko
-  AUTOLOAD:=$(call AutoLoad,45,ip_vs_ftp)
+  AUTOLOAD:=$(call AutoLoad,65,ip_vs_ftp)
 endef
 
 define KernelPackage/ipvs-ftp/description
@@ -823,7 +823,7 @@ define KernelPackage/ipvs-pe-sip
     CONFIG_IP_VS_PE_SIP
   DEPENDS:=+kmod-ipvs-core
   FILES:=$(LINUX_DIR)/net/netfilter/ipvs/ip_vs_pe_sip.ko
-  AUTOLOAD:=$(call AutoLoad,45,ip_vs_pe_sip)
+  AUTOLOAD:=$(call AutoLoad,65,ip_vs_pe_sip)
 endef
 
 define KernelPackage/ipvs-pe-sip/description
