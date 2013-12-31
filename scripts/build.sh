@@ -30,9 +30,7 @@
   ./scripts/feeds install tinc
   ./scripts/feeds install ipvsadm
   ./scripts/feeds install keepalived
-  ./scripts/feeds install python-webpy
-  ./scripts/feeds install libdnet
-  ./scripts/feeds install netserver
+  ./scripts/feeds install pypcap python-ifconfig python-json pysqlite twisted
   ./scripts/feeds install -a -p openvswitch
   ./scripts/feeds update luci
   echo '# CONFIG_KERNEL_BRIDGE is not set' >> .config
