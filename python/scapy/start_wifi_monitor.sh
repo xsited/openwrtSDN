@@ -8,5 +8,6 @@
                             
 insmod /lib/modules/3.3.8/rt5572sta.ko
 ifconfig ra0 up
+iwlist ra0 scan 
 iwconfig ra0 mode monitor
 free
